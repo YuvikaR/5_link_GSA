@@ -13,9 +13,10 @@
     h1 {
       color: #333;
     }
-    button {
+    .button {
+      display: block;
       padding: 15px 30px;
-      margin-top: 30px;
+      margin: 15px auto;
       font-size: 18px;
       background: #6200ea;
       color: white;
@@ -23,8 +24,10 @@
       border-radius: 10px;
       cursor: pointer;
       transition: 0.3s;
+      width: 200px;
+      text-decoration: none;
     }
-    button:hover {
+    .button:hover {
       background: #3700b3;
     }
     p {
@@ -32,24 +35,40 @@
       color: #555;
     }
   </style>
+  <script>
+    const links = [
+      {name: "Google", url: "https://www.google.com"},
+      {name: "YouTube", url: "https://www.youtube.com"},
+      {name: "Wikipedia", url: "https://www.wikipedia.org"},
+      {name: "Twitter", url: "https://www.twitter.com"},
+      {name: "GitHub", url: "https://www.github.com"}
+    ];
 
-<script>
-function openAllLinks() {
-  const links = [
-    "https://www.google.com",
-    "https://www.youtube.com",
-    "https://www.wikipedia.org",
-    "https://www.twitter.com",
-    "https://www.github.com"
-  ];
-  links.forEach(link => window.open(link, "_blank"));
-}
-</script>
+    function openAllLinks() {
+      links.forEach(link => window.open(link.url, "_blank"));
+    }
+  </script>
 </head>
 <body>
   <h1>Welcome to My Link Hub</h1>
-  <p>Click the button below to open all links at once:</p>
-  <button onclick="openAllLinks()">Open All Links</button>
+  <p>Click any link below to open it individually, or use the button to open all at once:</p>
+
+  <!-- Individual link buttons -->
+  <div id="links-container">
+    <script>
+      const container = document.getElementById("links-container");
+      links.forEach(link => {
+        const btn = document.createElement("a");
+        btn.href = link.url;
+        btn.target = "_blank";
+        btn.className = "button";
+        btn.textContent = link.name;
+        container.appendChild(btn);
+      });
+    </script>
+  </div>
+
+  <!-- Open all button -->
+  <button class="button" onclick="openAllLinks()">Open All Links</button>
 </body>
 </html>
-
