@@ -227,7 +227,7 @@ h1 .icon {
         <button id="allowBtn" aria-label="Open pop-up help page">Allow Pop-ups</button>
     </div>
     <div id="manual-links">
-        <a href="https://www.google.com target="_blank" rel="noopener noreferrer" class="manual-link" aria-label="Open Prompt 1 in new tab">🚀 Open Prompt 1</a>
+        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="manual-link" aria-label="Open Prompt 1 in new tab">🚀 Open Prompt 1</a>
         <a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer" class="manual-link" aria-label="Open Prompt 2 in new tab">🚀 Open Prompt 2</a>
         <a href="https://www.github.com" target="_blank" rel="noopener noreferrer" class="manual-link" aria-label="Open Prompt 3 in new tab">🚀 Open Prompt 3</a>
         <a href="https://www.stackoverflow.com" target="_blank" rel="noopener noreferrer" class="manual-link" aria-label="Open Prompt 4 in new tab">🚀 Open Prompt 4</a>
@@ -246,11 +246,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const tooltip = document.querySelector('.tooltip');
     const browserTip = document.getElementById('browser-tip');
     const links = [
-        "https://aiskillshouse.com/student/qr-mediator.html?uid=2239&promptId=16",
-        "https://aiskillshouse.com/student/qr-mediator.html?uid=2239&promptId=15",
-        "https://aiskillshouse.com/student/qr-mediator.html?uid=2239&promptId=14",
-        "https://aiskillshouse.com/student/qr-mediator.html?uid=2239&promptId=13",
-        "https://aiskillshouse.com/student/qr-mediator.html?uid=2239&promptId=6"
+          "https://www.google.com",
+          "https://www.wikipedia.org",
+          "https://www.github.com",
+          "https://www.stackoverflow.com",
+          "https://www.mozilla.org"
     ];
     // Tooltip show on keyboard focus or hover
     openAllBtn.addEventListener('focus', () => { tooltip.style.opacity = '1'; });
@@ -308,3 +308,4 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 </body>
 </html>
+
